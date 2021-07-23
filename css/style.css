@@ -73,7 +73,7 @@ h3 {
     float: right;
 }
 
-p {
+.content p {
     display:inline-block;
     font-family: 'Poppins', sans-serif;
     padding-left: 150px;
@@ -97,52 +97,38 @@ p {
 /* My Work Section */
 
 .heading {
-    float: left;
-}
+    width: 100%;
+} 
+
 .myWork {
     padding: 50px 30px;
     padding-top: 0;
   }
 
-  .workGrid {
-    display: grid;
-
-    background-color: #bdf6ef;
-    grid-template-columns: 50% 50%;
-    grid-template-rows: 350px 350px 350px;
-    grid-template-areas:
-    "img1 content1"
-    "img2 content2"
-    "img3 content3";
+.containerFluid {
+  display: flex;
+  flex-direction: column;
+  width: 75%;
+  background-color: #bdf6ef;
   }
 
-  .workGrid img {
-    width: 100%;
-    max-width: 250px;
-    margin: 0 auto;
-    display: block;
+.containerFluid img {
+  width: 100%;
+  max-width: 250px;
+  margin: 0 auto;
+  display: inline-block;
   }
 
-  .img1 {
-    grid-area: img1;
-  }
-  .img2 {
-    grid-area: img2;
-  }
-  .img3 {
-    grid-area: img3;
-  }
-  .img1, .img2, .img3, .content1, .content2, .content3 {
+
+.img1, .img2, .img3 {
+    display: flex;
     padding: 80px;
+    justify-content: left;
   }
-  .content1 {
-    grid-area: content1;
-  }
-  .content2 {
-    grid-area: content2;
-  }
-  .content3 {
-    grid-area: content3;
+
+.content1, .content2, .content3 {
+      display: flex;
+      justify-content: right;
   }
   
 /* Footer Section */
@@ -160,7 +146,7 @@ footer {
     padding: 0px 7px;
   }
 
-@media only screen and (max-width: 600) {
+/* @media only screen and (max-width: 600) {
     .flexContainer {
         flex-direction: column;
         width: 100%;
@@ -172,4 +158,4 @@ footer {
         "img1 content1"
         "img2 content2"
         "img3 content3";
-}
+} */
